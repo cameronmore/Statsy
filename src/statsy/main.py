@@ -5,7 +5,9 @@ Number = Union[int, float]
 
 def get_value_from_percentile(percentile:Number,data:list) -> Number:
     """
-    Annotation.
+    percentile = known percentile \n
+    data = list of ordered elements \n
+    This function returns the desired weighted percentile from a list of data.
     """
     value =(percentile/100) * (len(data) + 1)
     fr = value - (math.floor(value))
@@ -20,7 +22,7 @@ def get_value_from_percentile(percentile:Number,data:list) -> Number:
         lowest = ir_value
     diff = abs(ir_plus_1_value - ir_value)
     value = (diff * fr) + lowest
-    print(value)
+    return value
 
 
 def summation(i:int,range:int,expression:Callable,data:List[List[Number]]) -> Number:
@@ -29,7 +31,7 @@ def summation(i:int,range:int,expression:Callable,data:List[List[Number]]) -> Nu
     range = range to execute \n
     expression = function to apply to the data \n
     data = list of lists that contain values to evaluate \n
-    
+    This function returns the value of a summation.
     """
     if len(inspect.signature(expression).parameters) != len(data):
         raise ValueError("There must be the same number of input data lists as expression inputs")
@@ -59,9 +61,4 @@ def summation(i:int,range:int,expression:Callable,data:List[List[Number]]) -> Nu
             evaluated_list.append(expression(val))
               
     return sum(evaluated_list)
-
-
-print(summation(i=None,range=None,expression=lambda x: x*2,data=[[1,2,3]]))
-print(summation(i=None,range=None,expression=lambda y, x: x*y,data=[[1,2,3],[4,5,6]]))
-print(summation(i=2,range=2,expression=lambda y, x, r: x*y*r,data=[[1,2,3],[4,5,6],[2,2,2]]))
 
