@@ -1,0 +1,4 @@
+build/
+dist/
+statsy.egg-info
+dev.py
