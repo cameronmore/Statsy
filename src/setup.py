@@ -11,4 +11,5 @@ setup(
     license='Apache License 2.0',
     description='A package of statistical functions and operations.',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown'
 )
