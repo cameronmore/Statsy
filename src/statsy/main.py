@@ -33,6 +33,8 @@ def summation(i:int,range:int,expression:Callable,data:List[List[Number]]) -> Nu
     data = list of lists that contain values to evaluate \n
     This function returns the value of a summation.
     """
+    if expression is None:
+        expression = lambda x: x
     if len(inspect.signature(expression).parameters) != len(data):
         raise ValueError("There must be the same number of input data lists as expression inputs")
     lists_ready_to_eval = []
