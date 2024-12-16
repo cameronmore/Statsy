@@ -2,11 +2,7 @@ from .main import *
 
 e = summation(None,None,lambda n: 1/(math.factorial(n)), [[n for n in range (1000)]])
 
-def pi()->Number:
-    """
-    Returns pi
-    """
-    return math.pi
+pi= math.pi
 
 def e_specified(depth:int) -> Number:
     """
