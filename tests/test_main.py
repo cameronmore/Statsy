@@ -5,3 +5,6 @@ def simple_test_summation():
 
 def complex_test_summation():
     assert summation(i=2,range=2,expression=lambda y, x, r: x*y*r,data=[[1,2,3],[4,5,6],[2,2,2]]) == 56
+
+def test_dummy():
+    pass
