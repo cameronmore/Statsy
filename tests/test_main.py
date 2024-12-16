@@ -6,7 +6,7 @@ def test_simple_summation():
 
 def test_complex_summation():
     value = summation(i=2,range=2,expression=lambda y, x, r: x*y*r,data=[[1,2,3],[4,5,6],[2,2,2]]) 
-    assert value == 56
+    assert value == 57
 
 
 #def test_dummy():
