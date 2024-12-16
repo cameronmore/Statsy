@@ -1,4 +1,4 @@
-from statsy import summation
+from src.statsy import summation
 
 def simple_test_summation():
     assert summation(i=None,range=None,expression=lambda x: x*2,data=[[1,2,3]]) == 12
