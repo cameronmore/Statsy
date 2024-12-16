@@ -1,3 +1,4 @@
 dev/
 statsy.egg-info
 dev.py
+src/statsy/__pycache__/
