@@ -43,7 +43,6 @@ def trimean(data:list)->Number:
     p25 = get_value_from_percentile(25,data)
     p50 = get_value_from_percentile(50,data)
     p75 = get_value_from_percentile(75,data)
-    print(p25,p50,p75)
     
     return ( (p25 + (2 * p50) + p75 ) / 4 )
 
