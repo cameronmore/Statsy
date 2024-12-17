@@ -4,7 +4,9 @@ setup(
     name='statsy',
     version='0.2.0',
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+        "numpy>=1.25.0"
+        ],
     python_requires='>=3.6',
     license='Apache License 2.0',
     description='A package of statistical functions and operations.',
