@@ -1,3 +1,5 @@
+<img src="../docs/images/statsysmall.png" alt="drawing" width="200" display= "block" margin-left="auto" margin-right="auto"/>
+
 # Statsy
 ![PyPI Version](https://img.shields.io/pypi/v/statsy.svg)
 
