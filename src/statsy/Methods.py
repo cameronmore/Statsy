@@ -120,6 +120,21 @@ def skewness(data:list,type:str)->Number:
     skew = fron  *   summation(None,None,lambda x: (((x - mew)/ sd) ** 3) ,[data])
     return skew
 
+def Pearson_skewness(data:list,skew_type:Optional[str]=None,data_type:Optional[str]=None)-> Number:
+    """
+    skew_type = 'median' or 'mode' (median is default) \n
+    data_type = 'sample' or 'population' (sample by default) \n
+    Return's Pearson's coefficent of skewness. \n
+    """
+    x = arithmetic_mean(data)
+    top = 3 * ( x - median(data) )
+    if skew_type == 'mode':
+        top = ( x - mode(data))
+    bot = standard_deviation(data,'sample')
+    if data_type == 'population':
+        bot = standard_deviation(data,'population')
+    return top / bot
+
 def kurtosis(data:list,type:str)->Number:
     """
     type = 'sample' or 'population" \n
