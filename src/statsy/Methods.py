@@ -27,7 +27,7 @@ def median(data:list)->Number:
     if total_length & 1:
         return  data[int((total_length+1)/2)-1]
     else:
-        return (data[ int((total_length/2)-1)] + data[int((total_length/2)+1)])/2
+        return (data[ int((total_length/2)-1)] + data[int((total_length/2))])/2
 
 def mode(data:list)->any:
     """

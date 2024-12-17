@@ -1,9 +1,17 @@
 import math, string, inspect
 from typing import Callable, Union, List
+import numpy as np
 
 Number = Union[int, float]
 
-def get_value_from_percentile(percentile:Number,data:list) -> Number:
+def get_value_from_percentile(percentile:Number,data:list)->Number:
+    """
+    percentile = desired percentile \n
+    data = list of ordered elements \n
+    """
+    return np.percentile(data,percentile,method='median_unbiased')
+
+def get_value_from_weighted_percentile(percentile:Number,data:list) -> Number:
     """
     percentile = known percentile \n
     data = list of ordered elements \n
