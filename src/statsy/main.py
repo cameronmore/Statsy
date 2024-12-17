@@ -1,5 +1,5 @@
 import math, string, inspect
-from typing import Callable, Union, List
+from typing import Callable, Union, List, Optional
 import numpy as np
 
 Number = Union[int, float]
