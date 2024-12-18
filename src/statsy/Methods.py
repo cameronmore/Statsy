@@ -165,3 +165,12 @@ def Pearson_correlation_coefficient_r(data:List[list])->Number:
     b2 = root(2,(summation(None,None,lambda x: x**2,[data[1]]) - ((summation(None,None,None,[data[1]])**2) / n)))
     r = (t1-t2) / (b1 * b2)
     return r
+
+def variance_sum_of_correlated_variables(data:List[list],type:str)->Number:
+    """
+    Returns the sum of correlated variance of two variables. \n
+    """
+    t1 = variance(data[0],type)
+    t2 = variance(data[1],type)
+    t3 = 2 * Pearson_correlation_coefficient_r(data) * standard_deviation(data[0],type) * standard_deviation(data[1],type)
+    return t1 + t2 + t3
