@@ -5,3 +5,4 @@ src/statsy/__pycache__/
 src/build/
 src/build/dist/
 *.svg
+statsy_imports.png
